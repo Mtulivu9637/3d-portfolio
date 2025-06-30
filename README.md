@@ -65,8 +65,8 @@
 ### 🖼️ Screenshots
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x400/0a0a0a/00ffff?text=Hero+Section+Preview" alt="Hero Section" width="45%" style="margin: 10px;">
-  <img src="https://via.placeholder.com/800x400/0a0a0a/ff00ff?text=Projects+Section+Preview" alt="Projects Section" width="45%" style="margin: 10px;">
+![Screenshot 2025-06-30 170740](https://github.com/user-attachments/assets/a9e5fdb6-e9d9-400b-8d63-882e527d557d)
+
 </div>
 
 ### 📱 Device Compatibility
