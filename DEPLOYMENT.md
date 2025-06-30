@@ -11,7 +11,7 @@ git add .
 git commit -m "Initial commit"
 
 # 2. Create GitHub repository and push
-git remote add origin https://github.com/yourusername/3d-portfolio.git
+git remote add origin https://github.com/Mtulivu9637/3d-portfolio.git
 git push -u origin main
 
 # 3. Deploy to GitHub Pages
@@ -23,7 +23,7 @@ npm run deploy
 2. Scroll to "Pages" section
 3. Select "Deploy from a branch"
 4. Choose "gh-pages" branch
-5. Your site will be available at: `https://yourusername.github.io/3d-portfolio`
+5. Your site will be available at: `https://Mtulivu9637.github.io/3d-portfolio`
 
 ### 2. Netlify
 
