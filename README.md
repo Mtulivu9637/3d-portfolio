@@ -79,7 +79,7 @@
 
 ### 🌐 Live Demo
 
-> **[View Live Demo →](https://yourusername.github.io/3d-portfolio)**
+> **[View Live Demo →](https://Mtulivu9637.github.io/3d-portfolio)**
 > 
 > *Experience the full 3D portfolio with all interactive features*
 
@@ -91,7 +91,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/3d-portfolio.git
+git clone https://github.com/Mtulivu9637/3d-portfolio.git
 cd 3d-portfolio
 
 # 2. Install dependencies
@@ -824,10 +824,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: developer@example.com
+- **Email**: mtulivukidd@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
-- **Portfolio**: [Live Demo](https://yourusername.github.io/3d-portfolio)
+- **GitHub**: [Your GitHub Profile](https://github.com/Mtulivu9637)
+- **Portfolio**: [Live Demo](https://Mtulivu9637.github.io/3d-portfolio)
 
 ---
 
