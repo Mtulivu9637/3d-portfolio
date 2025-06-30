@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3D Portfolio - iOS Swift, Python/Django, React Developer">
+    <meta name="keywords" content="iOS Swift, Python Django, React Developer, Mobile Apps, Full Stack">
+    <meta name="author" content="Your Name">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap">
+    
+    <title>3D Portfolio - Software Developer</title>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="glitch-text" data-text="LOADING">LOADING</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container" id="nav-container">
+        <div class="nav-brand">
+            <span class="glitch-text" data-text="DEV">DEV</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-canvas" id="hero-canvas"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch-text" data-text="SOFTWARE">SOFTWARE</span>
+                    <span class="glitch-text" data-text="DEVELOPER">DEVELOPER</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typewriter-text">iOS Swift • Python/Django • React</span>
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">E-commerce Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Mobile Apps</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <button class="neon-button primary">View Projects</button>
+                    <button class="neon-button secondary">Download CV</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-canvas" id="about-canvas"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">
+                        <span class="glitch-text" data-text="ABOUT">ABOUT</span>
+                    </h2>
+                    <p class="about-description">
+                        Full-stack developer with 5+ years of experience creating innovative mobile and web solutions. 
+                        Specialized in iOS Swift development, Python/Django backend architecture, and React frontend 
+                        implementation with a focus on e-commerce platforms.
+                    </p>
+                    <div class="experience-timeline">
+                        <div class="timeline-item" data-year="2019">
+                            <h3>Started iOS Development</h3>
+                            <p>Began journey with Swift and iOS app development</p>
+                        </div>
+                        <div class="timeline-item" data-year="2020">
+                            <h3>Full-Stack Python/Django</h3>
+                            <p>Expanded to backend development with Django framework</p>
+                        </div>
+                        <div class="timeline-item" data-year="2021">
+                            <h3>React Frontend Mastery</h3>
+                            <p>Specialized in React development for e-commerce platforms</p>
+                        </div>
+                        <div class="timeline-item" data-year="2024">
+                            <h3>Senior Developer</h3>
+                            <p>Leading complex projects across mobile and web platforms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="skill-constellation" id="skill-constellation"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="projects-canvas" id="projects-canvas"></div>
+            <div class="projects-content">
+                <h2 class="section-title">
+                    <span class="glitch-text" data-text="PROJECTS">PROJECTS</span>
+                </h2>
+                
+                <div class="project-categories">
+                    <button class="category-btn active" data-category="all">All Projects</button>
+                    <button class="category-btn" data-category="ios">iOS Swift</button>
+                    <button class="category-btn" data-category="backend">Python/Django</button>
+                    <button class="category-btn" data-category="frontend">React</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- iOS Swift Projects -->
+                    <div class="project-card" data-category="ios">
+                        <div class="project-3d" data-project="ios-ecommerce"></div>
+                        <div class="project-info">
+                            <h3>E-commerce iOS App</h3>
+                            <p>Full-featured shopping app with Core Data, payment integration, and push notifications</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Swift</span>
+                                <span class="tech-tag">UIKit</span>
+                                <span class="tech-tag">Core Data</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ios">
+                        <div class="project-3d" data-project="ios-fitness"></div>
+                        <div class="project-info">
+                            <h3>Fitness Tracker App</h3>
+                            <p>Health tracking app with HealthKit integration and workout analytics</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">SwiftUI</span>
+                                <span class="tech-tag">HealthKit</span>
+                                <span class="tech-tag">Charts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python/Django Projects -->
+                    <div class="project-card" data-category="backend">
+                        <div class="project-3d" data-project="django-api"></div>
+                        <div class="project-info">
+                            <h3>E-commerce API Backend</h3>
+                            <p>Scalable REST API with authentication, payment processing, and inventory management</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">DRF</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="backend">
+                        <div class="project-3d" data-project="django-cms"></div>
+                        <div class="project-info">
+                            <h3>Content Management System</h3>
+                            <p>Full-featured CMS with user roles, content workflow, and media management</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Celery</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- React Projects -->
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-3d" data-project="react-store"></div>
+                        <div class="project-info">
+                            <h3>React E-commerce Platform</h3>
+                            <p>Modern shopping platform with cart management, user authentication, and payment integration</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-3d" data-project="react-dashboard"></div>
+                        <div class="project-info">
+                            <h3>Admin Dashboard</h3>
+                            <p>Comprehensive admin panel with real-time analytics and data visualization</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">WebSocket</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-3d" data-project="react-marketplace"></div>
+                        <div class="project-info">
+                            <h3>Marketplace Platform</h3>
+                            <p>Multi-vendor marketplace with seller dashboard and commission tracking</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="skills-canvas" id="skills-canvas"></div>
+            <div class="skills-content">
+                <h2 class="section-title">
+                    <span class="glitch-text" data-text="SKILLS">SKILLS</span>
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Mobile Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="95">
+                                <span class="skill-name">Swift</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="90">
+                                <span class="skill-name">iOS SDK</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="85">
+                                <span class="skill-name">SwiftUI</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="92">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="88">
+                                <span class="skill-name">Django</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="85">
+                                <span class="skill-name">PostgreSQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="90">
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="85">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="80">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-canvas" id="contact-canvas"></div>
+            <div class="contact-content">
+                <h2 class="section-title">
+                    <span class="glitch-text" data-text="CONTACT">CONTACT</span>
+                </h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's Build Something Amazing</h3>
+                        <p>Ready to discuss your next project? I'm available for freelance work and full-time opportunities.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>developer@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="neon-button primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Software Developer. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 3D Canvas for Code Blocks -->
+    <div id="code-blocks-canvas" class="code-blocks-canvas"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
