@@ -65,8 +65,9 @@
 ### 🖼️ Screenshots
 
 <div align="center">
-![Screenshot 2025-06-30 170740](https://github.com/user-attachments/assets/a9e5fdb6-e9d9-400b-8d63-882e527d557d)
+<img src="assets/Screenshot 2025-06-30 170427.png" alt="" width="700"/>
 
+<img src="assets/Screenshot 2025-06-30 170740.png" alt="" width="700"/>
 </div>
 
 ### 📱 Device Compatibility
